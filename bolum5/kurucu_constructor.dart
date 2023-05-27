@@ -29,12 +29,11 @@ void main(List<String> args) {
   araba3.bilgiGoster();
   araba3.yasHesapla();
 
-  var araba4=Araba.markasizKurucuMetot(2015,false);
-  var araba5=Araba.modelYiliOlmayanKurucuMetot("Suzuki" true);
-  araba5.bilgileriSoyle();
+  var araba4 = Araba.markasizKurucuMetot(2015, false);
+  var araba5 = Araba.modelYiliOlmayanKurucuMetot("Suzuki", true);
+  araba5.bilgiGoster();
   araba5.yasHesapla();
 }
-
 
 class Araba {
   int? modelYili;
@@ -47,18 +46,16 @@ class Araba {
     print("Kurucu metot");
   } */
 
-  Araba(this.modelYili,this.marka,this.otomatikMi){
+  Araba(this.modelYili, this.marka, this.otomatikMi) {
     print("Kurucu metot");
   }
-  Araba.markasizKurucuMetot(this.modelYili,this.otomatikMi);
-  Araa.modelYiliOlmayanKrucuMetot(String marka, bool otomatikMi){
-    this.otomatikMi=otomatikMi;
-    this.marka=marka;
-
+  Araba.markasizKurucuMetot(this.modelYili, this.otomatikMi);
+  Araba.modelYiliOlmayanKurucuMetot(String marka, bool otomatikMi) {
+    this.otomatikMi = otomatikMi;
+    this.marka = marka;
   }
 
-
- /* Araba(int y, String m, bool o) {
+  /* Araba(int y, String m, bool o) {
     //parametre alan kurucu metot
     print("Kurucu metot");
     /*this.modelYili=modelYili;
@@ -77,11 +74,10 @@ class Araba {
         "Arabanın model yılı ${modelYili}, markası ${marka} otomatik mi ${otomatikMi}");
   }
 
-  void yasHesapla(){
-    if(modelYili!=null())
-      print("Arabanın yaşı ${2023-modelyili!}");
-    else{
+  void yasHesapla() {
+    if (modelYili != null)
+      print("Arabanın yaşı ${2023 - modelYili!}");
+    else
       print("Model yılı olmadığından yaş hesaplanamadı");
-    }
   }
 }
